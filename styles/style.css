@@ -1,0 +1,86 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("/assets/images/background.avif");
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #a64dffbd;
+    padding: 50px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5em;
+}
+
+/* Stijl de login-knop */
+.login-btn {
+    background-color: rgb(92, 23, 98); /* Kleur van de knop */
+    color: white; /* Tekstkleur */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 90%;
+    border-radius: 8px; /* Ronde hoeken */
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover-effect voor de knop */
+.login-btn:hover {
+    background-color: rgb(139, 0, 127);
+    transform: scale(1.1); /* Laat de knop iets groter worden bij hover */
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.welkomtext{
+    font-size: 1.5em;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.project {
+    background-color: #2a2a2a;
+    padding: 20px; /* Iets meer padding voor meer ruimte */
+    border-radius: 10px;
+    width: 250px;  /* Verhoog de breedte */
+    height: 280px; /* Verhoog de hoogte */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.project:hover {
+    box-shadow: 0 0 30px 10px rgba(255, 0, 0, 0.8), 0 0 60px 20px rgba(255, 0, 0, 0.5); /* Felrode dubbele gloed */
+    transform: scale(1.05);
+}
+
+/* Speciale hover voor FIFA */
+.project.fifa:hover {
+    box-shadow: 0 0 30px 10px rgba(0, 255, 0, 0.8), 0 0 60px 20px rgba(0, 255, 0, 0.5); /* Felgroene dubbele gloed */
+}
+
+.project img {
+    width: 230px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 15px; /* Maakt de hoeken ronder */
+}
