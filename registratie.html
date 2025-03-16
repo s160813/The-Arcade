@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in FIFA</title>
+    <title>FIFA Account Registreren</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
@@ -16,13 +17,23 @@
         </section>
     </header>
 
-    <section class="invoer-log">
-        <h1 class="login-title">Account login</h1>
-        <p>Heeft u nog geen account? <a href="registratie.html" class="login-register-link">Account aanmaken</a></p>
+    <section class="invoer-registratie">
+        <h1 class="login-title">Account aanmaken</h1>
+        <p>Heeft u al een account? <a href="login.html" class="login-register-link">Login</a></p>
 
         <div class="veld">
-            <label for="mail-nummer">EMAIL OF NUMMER</label>
-            <input type="text" id="mail-nummer" placeholder="naam@mail.com of +32 xxx xxx xxx">
+            <label for="naam">NAAM</label>
+            <input type="text" id="naam" placeholder="Naam">
+        </div>
+
+        <div class="veld">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" placeholder="naam@mail.com">
+        </div>
+
+        <div class="veld">
+            <label for="nummer">NUMMER</label>
+            <input type="tel" id="nummer" placeholder="+32 xxx xxx xxx">
         </div>
 
         <div class="veld">
@@ -30,8 +41,8 @@
             <input type="password" id="wachtwoord" placeholder="Wachtwoord">
         </div>
 
-        <section class="button-log">
-            <a href="quiz.html" class="submit-btn">AANMELDEN</a>
+        <section class="button-registratie">
+            <a href="login.html" class="submit-btn">AANMAKEN</a>
         </section>
 
     </section>
