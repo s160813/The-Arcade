@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIFA Quiz</title>
+    <title>Favoriete Clubs</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <script defer src="../scripts/navbar.js"></script>
+    <script defer src="../scripts/favoClubs.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-    <script defer src="../scripts/navbar.js"></script> 
-
 </head>
-<body class="quiz-page">
+<body>
 
     <header>
         <nav class="navbar">
@@ -19,18 +19,27 @@
             <ul class="nav-links">
                 <li><a href="quiz.html">⚽️ FIFA Quiz</a></li>
                 <li><a href="blacklist.html">❌ Blacklist</a></li>
-                <li><a href="favoClubs.html">♥️ Favo Clubs</a></li>
+                <li><a href="favoClubs.html" class="active">♥️ Favo Clubs</a></li>
                 <li><a href="favoLeague.html">🏆 Favo League</a></li>
             </ul>
             <a href="profile.html" class="profile-icon">👤 Profiel</a>
         </nav>
     </header>
 
-    <main>
-        <button id="startQuiz">Start de Quiz</button>
-        <div id="quizContainer"></div>  
+    <main class="favo-container">
+        <input type="text" id="search-club" placeholder="Zoek een club..." oninput="searchClub(event)">
+    
+        <div id="favoClubsContainer"></div>
+    
+        <div id="clubDetailContainer" class="hidden">
+            <h2 id="clubName"></h2>
+            <img id="clubLogo" src="" alt="">
+            <p id="clubInfo"></p>
+            <h3>Spelers:</h3>
+            <ul id="playerList"></ul>
+            <p>Live gezien: <span id="timesSeen">0</span> keer</p>
+            <button id="seenButton">Gezien!</button>
+        </div>
     </main>
-
-    <script src="../scripts/quiz.js"></script>
 </body>
 </html>

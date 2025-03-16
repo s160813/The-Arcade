@@ -180,9 +180,6 @@ h1 {
 }
 
 /* LOGIN & REGISTRATIE FORMULIEREN */
-
-
-/* Maak de "Account login" titel kleiner */
 .login-title {
     font-size: 2em; /* Kleiner dan de standaard h1 */
     font-weight: bold;
@@ -268,95 +265,474 @@ input:focus {
     transform: scale(0.95);
 }
 
-/* NAVBAR */
+/* === NAVBAR === */
+
+.nav-links li a.active {
+    background-color: #ffcc00; /* Gele achtergrond */
+    color: black; /* Zwarte tekst */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
 .navbar {
     display: flex;
+    font-family: 'Orbitron', sans-serif;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background-color: #6a0dad;
+    background: linear-gradient(120deg, #6a0dad, #3a007f);
+    border-bottom: 3px solid #ffcc00;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.logo img, .profile-icon img {
-    width: 50px;
-    height: 50px;
+.home-icon {
+    font-size: 7px; 
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 
+                 0 0 16px rgba(255, 255, 255, 0.6); 
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-icon:hover {
+    transform: scale(1.1);
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     list-style: none;
+    padding: 0;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links li a:hover {
-    color: #ffcc00;
-}
-
-
-
-
-/* QUIZ */
-body {
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
-}
-
-#startQuiz {
-    margin-top: 30px;
-    padding: 10px 20px;
-    font-size: 18px;
     background-color: #ffcc00;
+    color: black;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    background: transparent; 
+}
+
+.profile-icon:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.profile-icon.active {
+    background-color: #ffcc00;
+    color: black;
+}
+
+
+/* === QUIZ CONTAINER === */
+#quizContainer {
+    display: none;
+    max-width: 600px;
+    background: rgba(0, 0, 50, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 50px auto;
+    border: 3px solid #ffcc00;
+    box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
+}
+
+/* === QUIZ BUTTONS === */
+.answer-btn, .fav-btn, .blacklist-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.answer-btn {
+    background: linear-gradient(120deg, #008CBA, #005f73);
+    color: white;
+}
+
+.answer-btn:hover {
+    background: linear-gradient(120deg, #00b4d8, #0096c7);
+}
+
+
+
+.favorite-btn, .blacklist-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.favorite-btn {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.favorite-btn:hover {
+    background-color: #e6b800;
+}
+
+.blacklist-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.blacklist-btn:hover {
+    background-color: #cc0000;
+}
+
+/* === START BUTTON === */
+#startQuiz {
+    margin-top: 400px;
+    padding: 20px 40px;
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(120deg, #ffcc00, #e6b800);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 #startQuiz:hover {
-    background-color: #e6b800;
+    background: linear-gradient(120deg, #ffd700, #ffcc00);
+    transform: scale(1.1);
 }
+
+/* === QUIZ IMAGE === */
 
 .quiz-img {
     width: 200px;
     height: auto;
     margin: 20px auto;
     display: block;
+    border-radius: 10px;
+    border: 3px solid white;
+    transition: transform 0.3s ease-in-out;
 }
 
-.answer-btn, .fav-btn, .blacklist-btn {
-    margin: 10px;
-    padding: 10px 15px;
-    font-size: 16px;
+.quiz-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* === GAME OVER MESSAGE === */
+#quizContainer h2 {
+    color: #ffcc00;
+}
+
+.error {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* === BLACKLIST === */
+.blacklist-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 50px;
+}
+
+.blacklist-club {
+    background: rgba(42, 115, 204, 0.588);
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.blacklist-club:hover {
+    transform: scale(1.05);
+}
+
+.club-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.edit-btn, .remove-btn {
+    display: block;
+    margin: 8px auto;
+    padding: 8px 12px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.answer-btn {
-    background-color: #008CBA;
+.edit-btn {
+    background: #5e137e;
+    color: rgb(255, 255, 255);
+}
+
+.remove-btn {
+    background: rgb(91, 16, 9);
     color: white;
 }
 
-.answer-btn:hover {
-    background-color: #005f73;
+
+.league-card {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
 }
 
-.fav-btn {
+.league-logo {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.club-item {
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.club-item:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+.club-info {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.club-logo {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #e6b800;
+}
+
+
+/* === PROFIELPAGINA === */
+.profile-container {
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 50px;
+}
+
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffcc00;
+    object-fit: cover;
+}
+
+.player-selection {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.player-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.player-options img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player-options img:hover {
+    transform: scale(1.1);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-info label {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.profile-info input {
+    font-size: 16px;
+    padding: 5px;
+    width: 250px;
+    text-align: center;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+.logout-btn {
+    margin-top: 20px;
     background-color: red;
     color: white;
 }
 
-.blacklist-btn {
-    background-color: black;
-    color: white;
+.logout-btn:hover {
+    background-color: darkred;
 }
 
+/* === FAVORIETE CLUBS === */
+.favo-container {
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 50px;
+}
 
+#search-club {
+    font-size: 16px;
+    padding: 8px;
+    width: 250px;
+    text-align: center;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
 
+#favoClubsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.club-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.club-card:hover {
+    transform: scale(1.1);
+}
+
+.club-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#clubDetailContainer {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+button {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
