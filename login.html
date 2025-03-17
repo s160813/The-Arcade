@@ -4,37 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in FIFA</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
+    
+
+
 </head>
 <body>
-
-    <header>
+    <header class="header-index">
         <section class="header-container">
             <h1 class="arcade-title">The Arcade</h1>
-            <a href="../index.html" class="login-btn">home</a>
+            <a href="../login.html" class="login-btn">Login</a>
         </section>
     </header>
 
     <section class="invoer-log">
-        <h1 class="login-title">Account login</h1>
-        <p>Heeft u nog geen account? <a href="registratie.html" class="login-register-link">Account aanmaken</a></p>
 
-        <div class="veld">
+        <h1>Account login</h1>
+        <p>Heeft u nog geen account? <a href="registratie.html" target="_blank">Account aanmaken</a></p>
+
+
+        <form action="" method="post">
+
             <label for="mail-nummer">EMAIL OF NUMMER</label>
-            <input type="text" id="mail-nummer" placeholder="naam@mail.com of +32 xxx xxx xxx">
-        </div>
+            <input type="text" name="mail-nummer" id="mail-nummer" placeholder="naam@mail.com of +32 xxx xxx xxx" required>
 
-        <div class="veld">
             <label for="wachtwoord">WACHTWOORD</label>
-            <input type="password" id="wachtwoord" placeholder="Wachtwoord">
-        </div>
+            <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord" required>
 
-        <section class="button-log">
-            <a href="quiz.html" class="submit-btn">AANMELDEN</a>
-        </section>
 
-    </section>
+             <section class="button-log">
+                <a href="quiz.html" class="submit-btn">AANMELDEN</a>
+            </section>
+
+        </form>
+
+     </section>
+
+
+
+
 
 </body>
 </html>

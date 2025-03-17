@@ -10,40 +10,37 @@
 </head>
 <body>
 
-    <header>
+    <header class="header-index">
         <section class="header-container">
             <h1 class="arcade-title">The Arcade</h1>
-            <a href="../index.html" class="login-btn">home</a>
+            <a href="../login.html" class="login-btn">Login</a>
         </section>
     </header>
 
+
     <section class="invoer-registratie">
-        <h1 class="login-title">Account aanmaken</h1>
-        <p>Heeft u al een account? <a href="login.html" class="login-register-link">Login</a></p>
+        <h1>Account aanmaken</h1>
+        <p>Heeft u al een account? <a href="login.html">Login</a></p>
 
-        <div class="veld">
+        <form action="" method="post">
+
             <label for="naam">NAAM</label>
-            <input type="text" id="naam" placeholder="Naam">
-        </div>
+            <input type="text" id="naam" name="naam" placeholder="Naam" required>
 
-        <div class="veld">
             <label for="email">EMAIL</label>
-            <input type="email" id="email" placeholder="naam@mail.com">
-        </div>
+            <input type="email" id="email" name="email" placeholder="naam@mail.com" required>
 
-        <div class="veld">
             <label for="nummer">NUMMER</label>
-            <input type="tel" id="nummer" placeholder="+32 xxx xxx xxx">
-        </div>
+            <input type="tel" id="nummer" name="nummer" placeholder="+32 xxx xxx xxx" required>
 
-        <div class="veld">
             <label for="wachtwoord">WACHTWOORD</label>
-            <input type="password" id="wachtwoord" placeholder="Wachtwoord">
-        </div>
+            <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" required>
 
-        <section class="button-registratie">
-            <a href="login.html" class="submit-btn">AANMAKEN</a>
-        </section>
+            <section class="button-registratie">
+                <a href="login.html" class="submit-btn">AANMAKEN</a>
+            </section>
+
+        </form>
 
     </section>
 

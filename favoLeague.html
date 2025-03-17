@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIFA Quiz</title>
+    <title>Favoriete League</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <script defer src="../scripts/favoLeague.js"></script>
     <script defer src="../scripts/navbar.js"></script> 
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
-<body class="quiz-page">
-
+<body>
     <header>
         <nav class="navbar">
             <a href="index.html" class="home-icon">
@@ -27,10 +26,12 @@
     </header>
 
     <main>
-        <button id="startQuiz">Start de Quiz</button>
-        <div id="quizContainer"></div>  
+        <section id="favoriteLeagueContainer">
+            <p>Bezig met laden...</p>
+        </section>
+        <section id="clubInfoContainer"></section>
     </main>
 
-    <script src="../scripts/quiz.js"></script>
+    <script src="favoLeague.js"></script>
 </body>
 </html>
